@@ -16,7 +16,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void didChangeDependencies() async {
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3999), () {
       context.go(AppRouteName.home);
     });
     super.didChangeDependencies();
