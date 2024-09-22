@@ -1,0 +1,39 @@
+{
+  "@@locale": "en",
+
+  "helloWorld": "Hello World!",
+
+  "welcome1title": "Explore Movies",
+  "welcome1description": "Discover the latest and greatest movies right here.",
+
+  "welcome2title": "Personalized Recommendations",
+  "welcome2description": "Get movie suggestions tailored just for you.",
+
+  "welcome3title": "Create Your Watchlist",
+  "welcome3description": "Start adding movies to your watchlist and never miss a hit!",
+
+    "home": "Home",
+    "homeDesc": "Home",
+
+    "search": "Search",
+    "searchDesc": "Search",
+
+    "watchList": "Watch List",
+    "watchListDesc": "Watch List",
+
+    "switchTheme": "Switch Theme",
+    "switchThemeDesc": "Switch Theme",
+
+    "stories": "Stories",
+    "storiesDesc": "Stories",
+
+    "upComing": "Up Coming",
+    "upComingDesc": "Up Coming",
+
+    "topRated": "Top Rated",
+    "topRatedDesc": "Top Rated",
+
+    "popular": "Popular",
+    "popularDesc": "Popular"
+
+}

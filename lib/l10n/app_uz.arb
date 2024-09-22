@@ -1,0 +1,39 @@
+{
+  "@@locale": "uz",
+
+  "helloWorld": "Salom Dunyo!",
+"welcome1title": "Filmlarni kashf eting",
+  "welcome1description": "Bu yerda eng so'nggi va eng yaxshi filmlarni kashf eting.",
+
+  "welcome2title": "Shaxsiy tavsiyalar",
+  "welcome2description": "Siz uchun maxsus tanlangan film tavsiyalarini oling.",
+
+  "welcome3title": "Tomosha ro'yxatingizni yarating",
+  "welcome3description": "Filmlarni tomosha ro'yxatingizga qo'shishni boshlang va hech qanday hitni o'tkazib yubormang!",
+
+
+
+    "home": "Asosiy",
+    "homeDesc": "Bosh sahifa",
+
+    "search": "Qidiruv",
+    "searchDesc": "Qidiruv",
+
+    "watchList": "Ko'rilganlar",
+    "watchListDesc": "Ko'rish ro'yxati",
+
+    "switchTheme": "Mavzuni almashtirish",
+    "switchThemeDesc": "Mavzuni almashtirish",
+
+    "stories": "Hikoyalar",
+    "storiesDesc": "Hikoyalar",
+
+    "upComing": "Tez orada",
+    "upComingDesc": "Tez orada",
+
+    "topRated": "Eng yuqori baholanganlar",
+    "topRatedDesc": "Eng yuqori baholar",
+
+    "popular": "Ommabop",
+    "popularDesc": "Ommabop"
+}
