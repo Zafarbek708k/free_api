@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:free_api/src/core/constants/context_extension.dart';
 import 'package:free_api/src/core/widgets/app_checkbox_button.dart';
 
-import '../../../../core/storage/sheared_preferens.dart';
-import '../../../../core/widgets/app_material_context.dart';
-import '../../../settings/locale_controller.dart';
+import '../storage/sheared_preferens.dart';
+import 'app_material_context.dart';
+import '../../feature/settings/locale_controller.dart';
 
 class LangButton extends StatefulWidget {
   const LangButton({super.key});

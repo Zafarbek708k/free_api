@@ -1,4 +1,4 @@
-import "package:free_api/src/feature/entry/view/pages/splash_page.dart";
+import "package:free_api/src/feature/home/view/pages/splash_page.dart";
 import "package:flutter/material.dart";
 import "package:go_router/go_router.dart";
 import "app_route_name.dart";
@@ -21,7 +21,7 @@ final class AppRouter {
       ),
 
       GoRoute(
-        path: AppRouteName.welcomePage,
+        path: AppRouteName.home,
         builder: (context, state) => const Scaffold(),
       ),
 

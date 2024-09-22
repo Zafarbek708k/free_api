@@ -1,10 +1,7 @@
 import "dart:async";
-import "dart:developer";
 import "package:flutter/material.dart";
-import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:go_router/go_router.dart";
 import "package:free_api/src/core/constants/context_extension.dart";
-import "package:free_api/src/core/storage/app_storage.dart";
 import "package:lottie/lottie.dart";
 import "../../../../core/routes/app_route_name.dart";
 import "../../../../core/widgets/app_material_context.dart";
@@ -17,31 +14,13 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
-  late final String? enterUser;
-
-  Future<bool?> isEnterUser() async {
-    enterUser = await AppStorage.$read(key: StorageKey.enter);
-    log(enterUser ?? "enter user = null");
-    if (enterUser != null) {
-      return true;
-    } else {
-      return false;
-    }
+  @override
+  void didChangeDependencies() async {
+    Timer(const Duration(seconds: 3), () {
+      context.go(AppRouteName.home);
+    });
+    super.didChangeDependencies();
   }
-
-  // @override
-  //   // void didChangeDependencies() async {
-  //   //   bool? a = await isEnterUser();
-  //   //   log("a ==  $a");
-  //   //   Timer(const Duration(seconds: 2), () {
-  //   //     if (a != null && a == true) {
-  //   //       context.go(AppRouteName.home);
-  //   //     } else {
-  //   //       context.go(AppRouteName.welcomePage);
-  //   //     }
-  //   //   });
-  //   //   super.didChangeDependencies();
-  //   // }
 
   @override
   Widget build(BuildContext context) {

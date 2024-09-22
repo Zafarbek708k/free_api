@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../core/widgets/app_material_context.dart';
 import '../core/widgets/text_widget.dart';
-import 'entry/view/widgets/custom_lang_button.dart';
+import '../core/widgets/custom_lang_button.dart';
 
 class CustomMainDrawer extends StatelessWidget {
   const CustomMainDrawer({super.key});
