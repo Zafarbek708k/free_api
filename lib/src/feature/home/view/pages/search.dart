@@ -55,8 +55,6 @@ class _SearchState extends ConsumerState<Search> {
 
   @override
   Widget build(BuildContext context) {
-    ref.watch(homePageController);
-    final controller = ref.read(homePageController);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

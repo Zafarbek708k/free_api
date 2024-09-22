@@ -28,6 +28,8 @@ class _HomePageState extends ConsumerState<Home> {
   UpComing? model2;
   Toprated? model3;
 
+  List<Widget> pages =[];
+
   Future<void> getData() async {
     setState(() {
       isLoading = false;
@@ -59,8 +61,6 @@ class _HomePageState extends ConsumerState<Home> {
 
   @override
   Widget build(BuildContext context) {
-    ref.watch(homePageController);
-    final controller = ref.read(homePageController);
     return Scaffold(
       body: !isLoading
           ? const Center(child: CircularProgressIndicator())

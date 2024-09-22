@@ -53,8 +53,8 @@ class _SplashPageState extends State<SplashPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Lottie.asset('assets/lottie/splash.json'),
-              Text("Code Guide", style: context.appTextStyle.bodyLarge),
+              Lottie.asset('assets/lottie/hand_loading.json'),
+              Text("Free apis Testing", style: context.appTextStyle.bodyLarge),
               MaterialButton(
                 onPressed: () async {
                   themeController.switchTheme(); // Using the shared instance
