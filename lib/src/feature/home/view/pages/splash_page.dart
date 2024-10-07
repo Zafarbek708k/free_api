@@ -1,5 +1,6 @@
 import "dart:async";
 import "package:flutter/material.dart";
+import "package:free_api/src/core/widgets/text_widget.dart";
 import "package:go_router/go_router.dart";
 import "package:free_api/src/core/constants/context_extension.dart";
 import "package:lottie/lottie.dart";
@@ -15,14 +16,6 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> {
   @override
-  void didChangeDependencies() async {
-    Timer(const Duration(seconds: 3999), () {
-      context.go(AppRouteName.home);
-    });
-    super.didChangeDependencies();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
@@ -33,7 +26,6 @@ class _SplashPageState extends State<SplashPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Lottie.asset('assets/lottie/hand_loading.json'),
-              Text("Free apis Testing", style: context.appTextStyle.bodyLarge),
               MaterialButton(
                 onPressed: () async {
                   themeController.switchTheme(); // Using the shared instance
@@ -42,7 +34,19 @@ class _SplashPageState extends State<SplashPage> {
                   side: BorderSide(color: Colors.deepOrange),
                 ),
                 child: const Text("Theme"),
-              )
+              ),
+              Button(onPressed: (){
+                context.push(AppRouteName.chat);
+              }, title: "Chat screen"),
+              Button(onPressed: (){
+                context.push(AppRouteName.doubleChat);
+              }, title: "Double Chat screen"),
+              Button(onPressed: (){
+                context.push(AppRouteName.home);
+              }, title: "Image to Screen"),
+              Button(onPressed: (){
+                context.push(AppRouteName.home);
+              }, title: "Qr code Generator"),
             ],
           ),
         ),
@@ -51,31 +55,21 @@ class _SplashPageState extends State<SplashPage> {
   }
 }
 
-/// Example of using color them and locale
+class Button extends StatelessWidget {
+  const Button({super.key, required this.onPressed, required this.title});
+  final VoidCallback onPressed;
+  final String title;
 
-///     Text(
-//                 context.localized.welcome3description,
-//                 style: context.appTextStyle.bodyMedium,
-//               ),
-//               MaterialButton(
-//                 onPressed: () async {
-//                   themeController.switchTheme(); // Using the shared instance
-//                 },
-//                 shape: const StadiumBorder(side: BorderSide(color: Colors.orangeAccent)),
-//                 child: Text(
-//                   "switch them",
-//                   style: TextStyle(color:  Theme.of(context).colorScheme.secondary),
-//                 ),
-//               ),
-//
-//               MaterialButton(
-//                 onPressed: () async {
-//                   localController.changeLocal(LangCodes.en);
-//                 },
-//                 shape: const StadiumBorder(side: BorderSide(color: Colors.orangeAccent)),
-//                 child: Text(
-//                   "switch Lang",
-//                   style: TextStyle(color:  Theme.of(context).colorScheme.secondary),
-//                 ),
-//               ),
-//
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+      onPressed: onPressed,
+      shape:  StadiumBorder(
+        side: BorderSide(
+          color: context.appTheme.secondary,
+        ),
+      ),
+      child: CustomTextWidget(title,textColor: context.appTheme.secondary,fontSize: 24,fontWeight: FontWeight.bold, ),
+    );
+  }
+}

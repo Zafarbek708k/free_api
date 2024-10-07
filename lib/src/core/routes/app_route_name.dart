@@ -8,6 +8,8 @@ final class AppRouteName {
   static const String search = "/search";
   static const String watchList = "/watch-list";
   static const String profile = "/profile";
+  static const String chat = "/chat";
+  static const String doubleChat = "/double-chat";
   static const String homeDetail = "homeDetail";
   static const String searchDetail = "searchDetail";
 
