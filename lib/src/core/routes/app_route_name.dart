@@ -12,6 +12,8 @@ final class AppRouteName {
   static const String doubleChat = "/double-chat";
   static const String homeDetail = "homeDetail";
   static const String searchDetail = "searchDetail";
+  static const String animation = "/animation";
+  static const String speechToText = "/speech-to-text";
 
 
   // static const String signIn = "/signIn";

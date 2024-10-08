@@ -26,15 +26,13 @@ class _SplashPageState extends State<SplashPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Lottie.asset('assets/lottie/hand_loading.json'),
-              MaterialButton(
-                onPressed: () async {
-                  themeController.switchTheme(); // Using the shared instance
-                },
-                shape: const StadiumBorder(
-                  side: BorderSide(color: Colors.deepOrange),
-                ),
-                child: const Text("Theme"),
-              ),
+
+              Button(onPressed: (){
+                context.push(AppRouteName.speechToText);
+              }, title: "Speech To Text"),
+              Button(onPressed: (){
+                context.push(AppRouteName.animation);
+              }, title: "Animation"),
               Button(onPressed: (){
                 context.push(AppRouteName.chat);
               }, title: "Chat screen"),
@@ -47,6 +45,9 @@ class _SplashPageState extends State<SplashPage> {
               Button(onPressed: (){
                 context.push(AppRouteName.home);
               }, title: "Qr code Generator"),
+              Button(onPressed: (){
+                themeController.switchTheme(); //
+              }, title: "Theme"),
             ],
           ),
         ),
